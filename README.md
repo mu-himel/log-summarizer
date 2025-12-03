@@ -3,7 +3,7 @@
 The log summarizer service will receive a collection of logs. It will perform log analysis using LLM (Google's Gemini AI) and generate a human-readable summary, key errors, and recommendations
 
 ### 1. STEPS TO BUILD AND RUN USING DOCKER
-Check your working directory, at the project's root directory, run the following commands to build a Docker image
+Check your working directory, It should at the project's root directory, run the following commands to build a Docker image
 To Build Docker Image 
 ```shell
 docker build -t logsummarizer:latest --no-cache .
