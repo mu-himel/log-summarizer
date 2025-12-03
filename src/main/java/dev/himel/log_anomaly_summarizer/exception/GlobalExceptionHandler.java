@@ -47,12 +47,7 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler({RuntimeException.class})
-    public ResponseEntity<Object> handleValidationExceptions(RuntimeException ve) {
-        Map<String,Object> response = new HashMap<>();
-        response.put(MESSAGE_KEY, ve.getMessage());
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-    }
+
 
     @ExceptionHandler({ServerException.class})
     public ResponseEntity<Object> handleValidationExceptions(ServerException ve) {
@@ -63,6 +58,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({HttpMessageNotReadableException.class})
     public ResponseEntity<Object> handleValidationExceptions(HttpMessageNotReadableException ve) {
+        Map<String,Object> response = new HashMap<>();
+        response.put(MESSAGE_KEY, ve.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler({RuntimeException.class})
+    public ResponseEntity<Object> handleValidationExceptions(RuntimeException ve) {
         Map<String,Object> response = new HashMap<>();
         response.put(MESSAGE_KEY, ve.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
