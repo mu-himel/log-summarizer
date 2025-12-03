@@ -20,6 +20,7 @@ public class LogSummarizerService {
         this.client = builder.build();
     }
     public Map<String,Object> getSummary(List<Log> req){
+        if(req.isEmpty()) throw new RuntimeException("Log required");
         ObjectMapper objectMapper = new ObjectMapper();
         ChatResponse chatResponse = null;
         try {
