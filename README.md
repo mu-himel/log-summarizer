@@ -9,7 +9,7 @@ To Build Docker Image
 ```shell
 docker build -t logsummarizer:latest --no-cache .
 ```
-To Run Docker Container Using Created Image use following command, make sure [API_KEY] replaced by you actual API KEY, which you can get from Google ai studio
+To Run Docker Container Using Created Image use following command, make sure [API_KEY] replaced by your actual API KEY, which you can get from Google ai studio
 ```shell
 docker run -d --name=c-log-summarizer -p 8080:8080 -e GOOGLE_GEMINI_API_KEY=[API_KEY] logsummarizer:latest
 ```
