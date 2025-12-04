@@ -17,7 +17,7 @@ To verify docker container running at 8080 port use following command
 ```shell
 docker ps
 ```
-or you can visit http://127.0.0.1:8080/actuator/health which all show application health status
+or you can visit http://127.0.0.1:8080/actuator/health which will show application health status
 
 ### 2. REQUEST AND RESPONSE
 
